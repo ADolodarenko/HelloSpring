@@ -11,22 +11,22 @@ import org.springframework.context.support.FileSystemXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 
 public class Utils {
-	public static BeanFactory getBeanFactory() {
+	public static BeanFactory getBeanFactory(String configName) {
 		BeanFactory factory = null;
 		
 		int containerType = Utils.getContainerType();
 		
 		switch (containerType) {
 		case 2:
-			factory = new FileSystemXmlApplicationContext("D:/Work/Projects/Java/eclipse/HelloSpring/Beans.xml");
+			factory = new FileSystemXmlApplicationContext("D:/Work/Projects/Java/eclipse/HelloSpring/" + configName);
 			
 			break;
 		case 3:
-			factory = new XmlBeanFactory(new ClassPathResource("Beans.xml"));
+			factory = new XmlBeanFactory(new ClassPathResource(configName));
 			
 			break;
 		default:
-			factory = new ClassPathXmlApplicationContext("Beans.xml");
+			factory = new ClassPathXmlApplicationContext(configName);
 			break;
 		}
 		

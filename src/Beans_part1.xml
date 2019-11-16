@@ -5,10 +5,10 @@
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
    default-init-method="init" default-destroy-method="destroy">
    
-   <bean id="helloWorld" class="com.tutorialspoint.HelloWorld" scope="prototype"> <!-- scope="singleton", init-method="init" destroy-method="destroy" -->
+   <bean id="helloWorld" class="com.tutorialspoint.part1.HelloWorld" scope="prototype"> <!-- scope="singleton", init-method="init" destroy-method="destroy" -->
    	<property name="message" value="Hello World!" />
    </bean>
    
-   <bean class="com.tutorialspoint.InitHelloWorld" />
+   <bean class="com.tutorialspoint.part1.InitHelloWorld" />
    
 </beans>

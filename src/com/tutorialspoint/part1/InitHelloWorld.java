@@ -1,4 +1,4 @@
-package com.tutorialspoint;
+package com.tutorialspoint.part1;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;

@@ -1,9 +1,11 @@
-package com.tutorialspoint;
+package com.tutorialspoint.part1;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.tutorialspoint.Utils;
 
 public class MainApp {
 
@@ -14,7 +16,7 @@ public class MainApp {
 	}
 	
 	private static void scopeTest() {
-		BeanFactory factory = Utils.getBeanFactory();
+		BeanFactory factory = Utils.getBeanFactory("Beans_part1.xml");
 		
 		HelloWorld objA = (HelloWorld) factory.getBean("helloWorld");
 		objA.setMessage("Object A");
@@ -25,7 +27,7 @@ public class MainApp {
 	}
 	
 	private static void initAndDestroyTest() {
-		AbstractApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+		AbstractApplicationContext context = new ClassPathXmlApplicationContext("Beans_part1.xml");
 		
 		HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
 		obj.getMessage();
