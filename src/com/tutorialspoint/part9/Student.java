@@ -1,5 +1,6 @@
 package com.tutorialspoint.part9;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Required;
 
 public class Student {
@@ -11,7 +12,8 @@ public class Student {
 		return age;
 	}
 	
-	@Required
+	//@Required
+	@Autowired(required = false)
 	public void setAge(Integer age) {
 		this.age = age;
 	}
@@ -20,7 +22,8 @@ public class Student {
 		return name;
 	}
 	
-	@Required
+	//@Required
+	@Autowired
 	public void setName(String name) {
 		this.name = name;
 	}
