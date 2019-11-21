@@ -11,7 +11,7 @@
    	<property name="password" value="killallhumas"/>
    </bean>
    
-   <bean id="studentJDBCTemplate" class="com.tutorialspoint.part19.StudentJDBCTemplate">
+   <bean id="studentJDBCTemplate" class="com.tutorialspoint.part20.StudentJDBCTemplate">
    	<property name="dataSource" ref="dataSource"/>
    </bean>
    
