@@ -19,7 +19,7 @@ public class StudentJDBCTemplate implements StudentDAO {
 	public void setDataSource(DataSource dataSource) {
 		this.dataSource = dataSource;
 		
-		this.jdbcCall = new SimpleJdbcCall(dataSource).withProcedureName("get_record");
+		this.jdbcCall = new SimpleJdbcCall(dataSource).withFunctionName("get_record");
 		this.jdbcTemplateObject = new JdbcTemplate(dataSource);
 	}
 
